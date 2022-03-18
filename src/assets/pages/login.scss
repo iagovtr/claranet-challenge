@@ -1,0 +1,261 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #f7f8fc;
+
+
+    @include mq('md') {
+        flex-direction: row;
+    }
+
+    &__container {
+        background: aqua;
+        height: 60%;
+        width: 100%;
+
+        &--image {
+            height: 40%;
+        }
+
+        @include mq('md') {
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: #f7f8fc;
+
+        &--image {
+            background: #f7f8fc;
+
+            @include mq('md') {
+                background: #c6dbe9;
+            }
+        }
+    }
+
+    &__logo-wrapper {
+        
+    }
+
+    &__logo {
+        height: 50px;
+
+        @include mq('md') {
+            height: 70px;
+        }
+        @include mq('lg') {
+            height: 100px;
+        }
+    }
+
+    &__title-welcome {
+        font-size: 18px;
+        color: #2E2E2E;
+
+        @include mq('md') {
+            font-size: 24px;
+        }
+
+        @include mq('lg') {
+            font-size: 30px;
+        }
+    }
+
+    &__input-container {
+        // border: 1px solid;
+    }
+
+    &__input-wrapper {
+        margin-top: 10px;
+        position: relative;
+    }
+
+    &__input {
+        height: 32px;
+        border: 1px solid #e4e0e0;
+        border-radius: 4px;
+        outline: none;
+        padding: 0px 45px 0px 25px;
+
+        &:focus {
+            border: 1px solid #cfcdcd;
+        }
+
+        @include mq('sm') {
+            height: 35px;
+            width: 230px;
+        }
+
+        @include mq('md') {
+            height: 38px;
+            padding: 0px 50px 0px 25px;
+        }
+    }
+
+    &__icon {
+        height: 14px;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 7px);
+        padding-left: 5px;
+    }
+
+    &__show-hide-password {
+        font-size: 12px;
+        color: #cfcdcd;
+        text-transform: uppercase;
+        position: absolute;
+        right: 8px;
+        top: calc(50% - 7px);
+        cursor: pointer;
+
+        @include mq('md') {
+            font-size: 15px;
+        }
+    }
+
+    &__forgot-password-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        @include mq('lg') {
+            margin-top: 10px;
+        }
+    }
+
+    &__remember-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__checkbox {
+        cursor: pointer;
+    }
+    
+    &__label {
+        font-size: 12px;
+        color: #2E2E2E;
+
+        @include mq('md') {
+            font-size: 15px;
+        }
+    }
+
+    &__forgot-password {
+        font-size: 12px;
+        color: red;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include mq('md') {
+            font-size: 14px;
+        }
+    }
+
+    &__buttons-content {
+        margin-top: 30px;
+    }
+
+    &__login-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: red;
+        height: 27px;
+        border: 2px solid red;
+        border-radius: 4px;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 3px 3px 5px #cfcdcd;
+        cursor: pointer;
+
+        @include mq('md') {
+            height: 30px;
+        }
+
+        @include mq('lg') {
+            border-radius: 6px;
+            height: 37px;
+            font-size: 18px;
+            box-shadow: 7px 5px 8px #cfcdcd;
+        }
+
+        &:hover {
+            color: red;
+            background: transparent;
+        }
+
+        &--google {
+            border: 2px solid #4285f4;
+            background: #4285f4;
+
+            &:hover {
+                color: #4285f4;
+                background: transparent;
+            }
+        }
+    }
+
+    &__google-button-wrapper {
+        margin-top: 10px;
+        position: relative;
+
+        @include mq('lg') {
+            margin-top: 20px
+        }
+    }
+
+    &__background-google {
+        position: absolute;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border: solid;
+        height: 25px;
+        width: 30px;
+        border-radius: 2px 2px 0px 0px;
+
+        @include mq('md') {
+            height: 30px;
+            width: 32px;
+        }
+
+        @include mq('lg') {
+            height: 35px;
+            width: 40px;
+        }
+    }
+
+    &__icon-google {
+        height: 25px;
+    }
+
+    &__banner-wrapper {
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        overflow: hidden;
+    }
+
+    &__banner {
+        width: 100%;
+    }
+}

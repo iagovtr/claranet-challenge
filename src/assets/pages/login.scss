@@ -178,8 +178,8 @@
         align-items: center;
         justify-content: center;
         background: red;
+        border: solid red;
         height: 27px;
-        border: 2px solid red;
         border-radius: 4px;
         color: white;
         font-size: 15px;
@@ -199,15 +199,17 @@
         }
 
         &:hover {
+            border: solid red;
             color: red;
             background: transparent;
         }
 
         &--google {
-            border: 2px solid #4285f4;
             background: #4285f4;
+            border: solid #4285f4;
 
             &:hover {
+                border: solid #4285f4;
                 color: #4285f4;
                 background: transparent;
             }
@@ -238,12 +240,10 @@
         border-radius: 0px 4px 4px 0px;
 
         @include mq('md') {
-            height: 30px;
             width: 32px;
         }
 
         @include mq('lg') {
-            height: 35px;
             width: 40px;
         }
     }

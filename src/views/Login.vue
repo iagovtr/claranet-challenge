@@ -27,7 +27,7 @@
             <div class="login__google-button-wrapper">
               <div class="login__login-button login__login-button--google" @mouseover="showIcon = false" 
                 @mouseleave="showIcon = true">
-                <div class="login__background-google" v-if="showIcon">
+                <div class="login__background-google" v-if="showIcon"  @mouseover="showIcon = false" @mouseleave="showIcon = true">
                   <img src="../assets/icons/google.svg" class="login__icon-google">
                 </div>
                 Logar com o Google

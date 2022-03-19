@@ -15,13 +15,13 @@
             <div class="login__show-hide-password" v-if="inputType == 'password'" @click="changeType()">SHOW</div>
             <div class="login__show-hide-password" v-if="inputType == 'text'" @click="changeType()">HIDE</div>
           </div>
-          <div class="login__forgot-password-content">
+          <!-- <div class="login__forgot-password-content">
             <div class="login__remember-wrapper">
               <input type="checkbox" class="login__checkbox">
               <div class="login__label">Lembrar-me</div>
             </div>
             <div class="login__forgot-password">Esqueci minha senha</div>
-          </div>
+          </div> -->
           <div class="login__buttons-content">
             <div class="login__login-button" @click="login()">Entrar</div>
             <div class="login__google-button-wrapper">

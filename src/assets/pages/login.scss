@@ -95,6 +95,7 @@
 
     &__icon {
         height: 14px;
+        width: 14px;
         position: absolute;
         left: 0;
         top: calc(50% - 7px);
@@ -216,6 +217,8 @@
     &__google-button-wrapper {
         margin-top: 10px;
         position: relative;
+        overflow: hidden;
+
 
         @include mq('lg') {
             margin-top: 20px
@@ -230,9 +233,9 @@
         justify-content: center;
         background: white;
         border: solid;
-        height: 25px;
+        height: 100%;
         width: 30px;
-        border-radius: 2px 2px 0px 0px;
+        border-radius: 0px 4px 4px 0px;
 
         @include mq('md') {
             height: 30px;

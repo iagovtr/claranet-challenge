@@ -1,19 +1,14 @@
-# login-claranet
+## 🚀 Desafio técnico - Criação de layout responsivo e sistema de login.
 
-## Project setup
-```
-npm install
-```
+### Ferramentas utilizadas no Projeto:
+🧰 Firebase - Sistema de autenticação
+<br>
+💻 Vue JS - Framework JavaScript
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Iniciar a aplicação localmente
+`npm run serve`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Home Page
+
+#### Produção: https://claranet-challenge.herokuapp.com/#/login

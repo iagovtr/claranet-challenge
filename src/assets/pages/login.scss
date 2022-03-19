@@ -6,13 +6,11 @@
     height: 100vh;
     background: #f7f8fc;
 
-
     @include mq('md') {
         flex-direction: row;
     }
 
     &__container {
-        background: aqua;
         height: 60%;
         width: 100%;
 
@@ -42,10 +40,6 @@
         }
     }
 
-    &__logo-wrapper {
-        
-    }
-
     &__logo {
         height: 50px;
 
@@ -71,10 +65,6 @@
         }
     }
 
-    &__input-container {
-        // border: 1px solid;
-    }
-
     &__input-wrapper {
         margin-top: 10px;
         position: relative;
@@ -86,9 +76,10 @@
         border-radius: 4px;
         outline: none;
         padding: 0px 45px 0px 25px;
+        box-shadow: 2px 2px 5px #cfcdcd;
 
         &:focus {
-            border: 1px solid #cfcdcd;
+            border: 1px solid #acabab;
         }
 
         @include mq('sm') {
@@ -121,6 +112,11 @@
 
         @include mq('md') {
             font-size: 15px;
+            top: calc(50% - 9px);
+        }
+
+        &:hover {
+            color: #acabab;
         }
     }
 
@@ -169,7 +165,11 @@
     }
 
     &__buttons-content {
-        margin-top: 30px;
+        margin-top: 10px;
+
+        @include mq('lg') {
+            margin-top: 30px;
+        }
     }
 
     &__login-button {
@@ -250,12 +250,12 @@
     }
 
     &__title-register {
-        cursor: pointer;
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
         font-size: 13px;
 
         @include mq('lg') {
+            margin-top: 20px;
             font-size: 16px;
         }
 
@@ -277,5 +277,14 @@
 
     &__banner {
         width: 100%;
+
+        @include mq('sm') {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include mq('md') {
+            width: 100%;
+        }
     }
 }

@@ -2,9 +2,7 @@
   <div class="login">
     <div class="login__container">
       <div class="login__wrapper">
-        <div class="login__logo-wrapper">
-          <img src="../assets/icons/logo.png" class="login__logo">
-        </div>
+        <img src="../assets/icons/logo.png" class="login__logo">
         <div class="login__input-container" v-if="showForm == statusEnum.login">
           <div class="login__title-welcome">Bem-vindo!</div>  
           <div class="login__input-wrapper">
@@ -36,7 +34,7 @@
               </div>
             </div>
             <div class="login__title-register">Ainda não tem uma conta? 
-              <b class="login__title-register login__title-register--span" @click="showForm = statusEnum.register">Cadastre-se</b>
+              <b class="login__title-register login__title-register--span" @click="openRegister()">Cadastre-se</b>
             </div>
           </div>
         </div>
@@ -56,7 +54,7 @@
             <div class="login__login-button" @click="signUp()">Criar</div>
           </div>
           <div class="login__title-register">Já tenho uma conta. 
-            <b class="login__title-register login__title-register--span" @click="showForm = statusEnum.login">Entrar</b>
+            <b class="login__title-register login__title-register--span" @click="openLogin()">Entrar</b>
           </div>
         </div>
       </div>
@@ -93,6 +91,18 @@ export default {
       var vm = this;
       vm.inputType = vm.inputType === "password" ? "text" : "password";
     },
+    openLogin() {
+      var vm = this;
+      vm.email = null;
+      vm.password = null;
+      vm.showForm = vm.statusEnum.login;
+    },
+    openRegister() {
+      var vm = this;
+      vm.email = null;
+      vm.password = null;
+      vm.showForm = vm.statusEnum.register;
+    },
     login() {
       var vm = this;
       firebase.auth().signInWithEmailAndPassword(vm.email, vm.password).then(() => {
@@ -100,8 +110,7 @@ export default {
       },
       (err) => {
         alert('Não foi possível realizar o login. '+err.message);
-      }
-      )
+      });
     },
     signUp() {
       var vm = this;

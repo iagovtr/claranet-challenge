@@ -58,6 +58,7 @@
     }
 
     &__title-welcome {
+        text-align: center;
         font-size: 18px;
         color: #2E2E2E;
 
@@ -246,6 +247,25 @@
 
     &__icon-google {
         height: 25px;
+    }
+
+    &__title-register {
+        cursor: pointer;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 13px;
+
+        @include mq('lg') {
+            font-size: 16px;
+        }
+
+        &--span {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__banner-wrapper {
